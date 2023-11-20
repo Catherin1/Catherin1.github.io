@@ -1,21 +1,17 @@
 async function sendMessage() {
     const userInput = document.getElementById('user-input').value;
-    const chatHistory = document.getElementById('chat-history');
+    const chatbotResponse = document.getElementById('chatbot-response');
 
-    // Your chatbot logic here
     const response = await getChatbotResponse(userInput);
 
-    // Display user message and chatbot response
+    // 显示用户消息和聊天机器人的响应
     chatHistory.innerHTML += `<div>User: ${userInput}</div>`;
-    chatHistory.innerHTML += `<div>Chatbot: ${response}</div>`;
+    chatbotResponse.value = `Chatbot: ${response}`;
 
-    // Clear the input field
     document.getElementById('user-input').value = '';
 }
 
 async function getChatbotResponse(userInput) {
-    // Your chatbot model loading and response logic here
-    // Example using the provided code
     const tokenizer = await AutoTokenizer.from_pretrained("Qwen/Qwen-7B-Chat-Int4", { trust_remote_code: true });
     const model = await AutoModelForCausalLM.from_pretrained("Qwen/Qwen-7B-Chat-Int4", { trust_remote_code: true });
     const { response } = await model.chat(tokenizer, userInput, history=null);
