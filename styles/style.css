@@ -1,0 +1,54 @@
+
+body {
+    width: 50%;
+    max-width: 800px;
+    min-width: 480px;
+    margin: 0 auto;
+
+  }
+
+label {
+    margin-top: 100px;
+    justify-content: center;
+    width: 200px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 20px; /* 添加底部间距 */
+  }
+
+  
+
+/* 修改自定义名字输入框的样式 */
+#customname {
+    margin-top: 100px;
+    justify-content: center;
+    padding: 10px;
+    width: 200px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  /* 修改生成随机笑话按钮的样式 */
+  .randomize {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #FFC125;
+    color: #5E2612;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  /* 修改故事段落的样式 */
+  .story {
+    font-size: 20px;
+    margin-top: 20px;
+    background-color: #F5F5F5;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
